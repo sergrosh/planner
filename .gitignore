@@ -1,0 +1,13 @@
+.idea
+.gradle
+build.env
+gradlew.bat
+test.log
+test-integration.log
+build
+**/src-gen/*
+build/
+out/
+logs/
+cache/
+public/
