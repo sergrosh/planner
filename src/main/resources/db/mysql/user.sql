@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS planner;
+
+ALTER DATABASE planner
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+
+GRANT ALL PRIVILEGES ON planner.* TO 'planner'@'%' IDENTIFIED BY 'planner';
