@@ -1,12 +1,23 @@
-mysql:
-  image: mysql:5.7
-  ports:
-    - "3306:3306"
-  environment:
-    - MYSQL_ROOT_PASSWORD=
-    - MYSQL_ALLOW_EMPTY_PASSWORD=true
-    - MYSQL_USER=planner
-    - MYSQL_PASSWORD=planner
-    - MYSQL_DATABASE=planner
-  volumes:
-    - "./conf.d:/etc/mysql/conf.d:ro"
+---
+version: '3.5'
+services:
+  planner:
+    build:
+      context: .
+      target: app
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=planner
+      - MYSQL_PASSWORD=planner
+      - MYSQL_DATABASE=planner
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"
