@@ -15,7 +15,7 @@ CREATE TABLE members (
   birth_date DATE
 );
 ALTER TABLE members ADD CONSTRAINT fk_members_families FOREIGN KEY (family_id) REFERENCES families (id);
-CREATE INDEX members_name ON members (family_id);
+CREATE INDEX members_name ON members (name);
 
 CREATE TABLE transactions (
   id          INTEGER IDENTITY PRIMARY KEY,
