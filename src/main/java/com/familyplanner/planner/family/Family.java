@@ -8,10 +8,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
-import com.familyplanner.planner.member.Member;
 import com.familyplanner.planner.model.BaseEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
  * Simple JavaBean domain object representing a family.

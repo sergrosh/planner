@@ -6,7 +6,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
 import com.familyplanner.planner.family.Family;
-import com.familyplanner.planner.member.Member;
+import com.familyplanner.planner.family.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;

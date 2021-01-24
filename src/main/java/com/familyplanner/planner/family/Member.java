@@ -1,13 +1,17 @@
-package com.familyplanner.planner.member;
+package com.familyplanner.planner.family;
 
 import java.time.LocalDate;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.familyplanner.planner.family.Family;
+import com.familyplanner.planner.budget.Transaction;
 import com.familyplanner.planner.model.NamedEntity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -29,5 +33,7 @@ public class Member extends NamedEntity {
     @JsonIgnoreProperties("members")
     private Family family;
 
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "member", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("member")
+    private List<Transaction> transactions;
 }

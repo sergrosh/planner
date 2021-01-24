@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "Family controller", tags = "family")
 public class FamilyController {
 
-    private FamilyRepository familyRepository;
+    private final FamilyRepository familyRepository;
 
     public FamilyController(FamilyRepository familyRepository) {
         this.familyRepository = familyRepository;

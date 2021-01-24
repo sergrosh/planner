@@ -1,4 +1,4 @@
-package com.familyplanner.planner.member;
+package com.familyplanner.planner.family;
 
 import org.springframework.data.repository.Repository;
 
