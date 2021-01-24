@@ -17,8 +17,8 @@ CREATE TABLE IF NOT EXISTS members (
 CREATE TABLE IF NOT EXISTS transactions (
   id INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   member_id      INT(4) UNSIGNED NOT NULL,
-  operation_type  INT(1)        INTEGER NOT NULL,
-  amount DECIMAL (19,4),
+  operation_type ENUM('DEBIT', 'CREDIT'),
+  amount DECIMAL (15,2),
   currency       VARCHAR(3),
   execution_date  DATE,
   description VARCHAR(255),

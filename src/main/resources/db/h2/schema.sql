@@ -20,8 +20,8 @@ CREATE INDEX members_name ON members (name);
 CREATE TABLE transactions (
   id          INTEGER IDENTITY PRIMARY KEY,
   member_id      INTEGER NOT NULL,
-  operation_type          INTEGER NOT NULL,
-  amount DECIMAL (19,4),
+  operation_type ENUM('DEBIT', 'CREDIT'),
+  amount DECIMAL (15,2),
   currency       VARCHAR(3),
   execution_date  DATE,
   description VARCHAR(255)
