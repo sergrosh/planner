@@ -24,6 +24,18 @@ public class FamilyController {
     }
 
     /**
+     * Get all families {@link Family}.
+     *
+     * @return all families
+     */
+    @CrossOrigin
+    @ApiOperation(value = "Get families by surname", tags = "Get families")
+    @GetMapping(value = "/all")
+    public Collection<Family> getAllFamilies() {
+        return familyRepository.findAll();
+    }
+
+    /**
      * Get family {@link Family} by surname.
      *
      * @param surname surname
