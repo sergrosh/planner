@@ -1,28 +1,37 @@
 ---
 version: '3.5'
 services:
-#  planner:
-#    build:
-#      context: .
-#      target: app
-#      dockerfile: ./Dockerfile
-#    restart: always
-#    ports:
-#      - 8080:8080
+  planner:
+    build:
+      context: .
+      target: app
+      dockerfile: ./delivery/planner/Dockerfile
+    restart: always
+    ports:
+      - 8081:8081
 #    environment:
 #      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/planner
 #      SPRING_DATASOURCE_INITIALIZATION_MODE: always
+  planner-app:
+    build:
+      context: .
+      dockerfile: ./delivery/app/Dockerfile
+    restart: always
+    ports:
+      - 8080:80
+#    depends_on:
+#      - planner
 #    depends_on:
 #      - docker-mysql
-  docker-mysql:
-    image: mysql:5.7
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
-      - MYSQL_USER=planner
-      - MYSQL_PASSWORD=planner
-      - MYSQL_DATABASE=planner
-    volumes:
-      - "./conf.d:/etc/mysql/conf.d:ro"
+#  docker-mysql:
+#    image: mysql:5.7
+#    ports:
+#      - "3306:3306"
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=
+#      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+#      - MYSQL_USER=planner
+#      - MYSQL_PASSWORD=planner
+#      - MYSQL_DATABASE=planner
+#    volumes:
+#      - "./conf.d:/etc/mysql/conf.d:ro"
