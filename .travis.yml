@@ -1,0 +1,19 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t sergrosh/planner
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "planner"
+  env: "Planner-env"
+  bucket_name: "elasticbeanstalk-us-east-2-976371366785"
+  bucket_path: "planner"
+  on:
+    branch: master
+
+
+
