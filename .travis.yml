@@ -16,7 +16,7 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-2-976371366785"
   bucket_path: "planner"
   on:
-    branch: master
+    branch: main
 
 
 
