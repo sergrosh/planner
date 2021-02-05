@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sergrosh/planner
+  - docker build -t sergrosh/planner .
 
 deploy:
   provider: elasticbeanstalk
