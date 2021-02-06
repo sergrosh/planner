@@ -9,7 +9,7 @@ RUN GRADLE_OPTS="-Dorg.gradle.daemon=false" ./gradlew bootJar
 # RUN Container
 FROM openjdk:11-slim AS app
 
-EXPOSE 8080
+EXPOSE 80
 
 COPY --from=build /app/entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
