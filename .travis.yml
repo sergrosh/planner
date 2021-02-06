@@ -12,7 +12,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "planner"
-  env: "Planner-env"
+  env: "Planner-env-1"
   bucket_name: "elasticbeanstalk-us-east-2-976371366785"
   bucket_path: "planner"
   on:
