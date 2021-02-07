@@ -4,13 +4,16 @@ server:
   servlet:
     context-path: /api/v1
 spring:
+  h2:
+    console:
+      enabled: true
   datasource:
-#    driverClassName: com.mysql.jdbc.Driver
+    #    driverClassName: com.mysql.jdbc.Driver
     schema: "classpath*:db/${database}/schema.sql"
     data: "classpath*:db/${database}/data.sql"
-#    url: "jdbc:mysql://localhost:3306/planner"
-#    username: ${MYSQL_USER:planner}
-#    password: ${MYSQL_PASS:planner}
+    #    url: "jdbc:mysql://localhost:3306/planner"
+    #    username: ${MYSQL_USER:planner}
+    #    password: ${MYSQL_PASS:planner}
     initialization-mode: always
   jpa:
     open-in-view: false
