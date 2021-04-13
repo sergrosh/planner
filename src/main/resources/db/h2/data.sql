@@ -1,6 +1,7 @@
 INSERT INTO families VALUES (1, 'Johns');
 INSERT INTO families VALUES (2, 'Stevens');
 INSERT INTO families VALUES (3, 'Jenkins');
+INSERT INTO families VALUES (4, 'Jenkits');
 
 INSERT INTO members VALUES (1, 1, 'John', '1980-09-07');
 INSERT INTO members VALUES (2, 1, 'Helen', '1985-05-05');

@@ -28,8 +28,12 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-web',
             'com.github.ben-manes.caffeine:caffeine:2.7.0',
             "io.springfox:springfox-boot-starter:${swaggerVersion}",
-            'org.springframework.boot:spring-boot-configuration-processor'
-    )
+            'org.springframework.boot:spring-boot-configuration-processor',
+            'com.graphql-java:graphql-spring-boot-starter:5.0.2',
+            'com.graphql-java:graphql-java-tools:5.2.4',
+            "org.springframework.boot:spring-boot-starter-actuator",
+            "de.codecentric:spring-boot-admin-starter-client:2.4.0",
+            "de.codecentric:spring-boot-admin-starter-server:2.4.0")
 
     runtimeOnly('com.h2database:h2')
     runtimeOnly('mysql:mysql-connector-java')
